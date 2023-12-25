@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "claims_and_billings",
+  "info": {
+    "singularName": "claims-and-billing",
+    "pluralName": "claims-and-billings",
+    "displayName": "Claims And Billing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.title-subtitle"
+    },
+    "Solutions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "card.our-solutions"
+    },
+    "About": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about"
+    }
+  }
+}

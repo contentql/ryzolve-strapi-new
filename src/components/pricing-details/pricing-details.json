@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_pricing_details_pricing_details",
+  "info": {
+    "displayName": "Pricing Details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "monthly_price": {
+      "type": "float",
+      "required": true
+    },
+    "yearly_price": {
+      "type": "float",
+      "required": true
+    },
+    "plan_name": {
+      "type": "string",
+      "required": true
+    },
+    "plan_features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.group-of-items"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "key": "plugin_content_manager_configuration_components::pricing-details.pricing-details",
+  "value": {
+    "uid": "pricing-details.pricing-details",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "plan_name",
+      "defaultSortBy": "plan_name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "monthly_price": {
+        "edit": {
+          "label": "monthly_price",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "monthly_price",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "yearly_price": {
+        "edit": {
+          "label": "yearly_price",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "yearly_price",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "plan_name": {
+        "edit": {
+          "label": "plan_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "plan_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "plan_features": {
+        "edit": {
+          "label": "plan_features",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "plan_features",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "monthly_price",
+        "yearly_price",
+        "plan_name"
+      ],
+      "edit": [
+        [
+          {
+            "name": "monthly_price",
+            "size": 4
+          },
+          {
+            "name": "yearly_price",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "plan_name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "plan_features",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "priceId": {
+      "type": "string"
+    },
+    "time": {
+      "type": "integer"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "units": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit.unit"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "image": {
+      "type": "string"
+    },
+    "quiz": {
+      "type": "component",
+      "repeatable": true,
+      "component": "quiz.quiz"
+    },
+    "WhatYouWillLearn": {
+      "type": "component",
+      "repeatable": true,
+      "component": "course.what-you-will-learn"
+    },
+    "Skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "course.skills-you-gain"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}

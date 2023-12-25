@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_us_contact_uses",
+  "info": {
+    "displayName": "Contact Us",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "biginteger"
+    }
+  }
+}

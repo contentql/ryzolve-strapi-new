@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_strategy_strategies",
+  "info": {
+    "displayName": "Strategy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "steps": {
+      "displayName": "strategy steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "steps.strategy-steps"
+    }
+  }
+}

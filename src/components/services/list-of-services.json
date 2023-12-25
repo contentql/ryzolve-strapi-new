@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_services_list_of_services",
+  "info": {
+    "displayName": "list of services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hoverDescription": {
+      "type": "string"
+    }
+  }
+}

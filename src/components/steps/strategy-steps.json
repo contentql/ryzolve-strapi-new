@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_steps_strategy_steps",
+  "info": {
+    "displayName": "strategy steps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "strategy_step_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.group-of-items"
+    },
+    "strategy_step_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "compliance_regulations",
+  "info": {
+    "singularName": "compliance-regulation",
+    "pluralName": "compliance-regulations",
+    "displayName": "Compliance Regulation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.title-subtitle"
+    },
+    "Solutions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "card.our-solutions"
+    },
+    "About": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about"
+    }
+  }
+}

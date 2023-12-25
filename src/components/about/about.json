@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_abouts",
+  "info": {
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "aboutList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.group-of-items"
+    }
+  }
+}

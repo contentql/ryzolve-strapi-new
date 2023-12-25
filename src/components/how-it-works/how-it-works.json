@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_how_it_works_how_it_works",
+  "info": {
+    "displayName": "How it works",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "working_steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.list-of-services"
+    }
+  }
+}

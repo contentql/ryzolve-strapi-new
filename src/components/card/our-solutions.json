@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_card_our_solutions",
+  "info": {
+    "displayName": "our solutions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "personalAgency": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.group-of-items"
+    }
+  }
+}

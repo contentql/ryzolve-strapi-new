@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_testimonials_testimonials",
+  "info": {
+    "displayName": "Testimonials",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "review": {
+      "type": "text",
+      "required": true
+    },
+    "designation": {
+      "type": "string",
+      "required": false
+    },
+    "company_name": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "rating": {
+      "type": "string"
+    }
+  }
+}

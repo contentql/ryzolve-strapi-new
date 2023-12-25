@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "testimonial-section.testimonial-section"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_list_group_of_items",
+  "info": {
+    "displayName": "group of items"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  }
+}

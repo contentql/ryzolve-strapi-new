@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_learn_more_learn_mores",
+  "info": {
+    "displayName": "Learn More",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "help": {
+      "type": "component",
+      "repeatable": true,
+      "component": "social-media-links.social-media-link"
+    }
+  }
+}

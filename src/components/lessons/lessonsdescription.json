@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_lessons_lessonsdescriptions",
+  "info": {
+    "displayName": "lessonsdescription",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "time": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "lessonContent": {
+      "type": "blocks"
+    }
+  }
+}

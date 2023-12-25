@@ -1,0 +1,608 @@
+{
+  "name": "Author",
+  "code": "strapi-author",
+  "description": "Authors can manage the content they have created.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::claims-and-billing.claims-and-billing",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::claims-and-billing.claims-and-billing",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::claims-and-billing.claims-and-billing",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::claims-and-billing.claims-and-billing",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::compliance-regulation.compliance-regulation",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::compliance-regulation.compliance-regulation",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::compliance-regulation.compliance-regulation",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::compliance-regulation.compliance-regulation",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::document-management.document-management",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::document-management.document-management",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::document-management.document-management",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::document-management.document-management",
+      "properties": {
+        "fields": [
+          "Hero.title",
+          "Hero.subtitle",
+          "Solutions.title",
+          "Solutions.description",
+          "Solutions.personalAgency.item",
+          "About.title",
+          "About.description",
+          "About.aboutList.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "NeedHelp.help.name",
+          "NeedHelp.help.link",
+          "LearnMore.help.name",
+          "LearnMore.help.link",
+          "ContactUs.address",
+          "ContactUs.email",
+          "ContactUs.phone"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::footer.footer",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "NeedHelp.help.name",
+          "NeedHelp.help.link",
+          "LearnMore.help.name",
+          "LearnMore.help.link",
+          "ContactUs.address",
+          "ContactUs.email",
+          "ContactUs.phone"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "NeedHelp.help.name",
+          "NeedHelp.help.link",
+          "LearnMore.help.name",
+          "LearnMore.help.link",
+          "ContactUs.address",
+          "ContactUs.email",
+          "ContactUs.phone"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "hero.title",
+          "hero.subtitle",
+          "ourSolutions.title",
+          "ourSolutions.description",
+          "ourSolutions.personalAgency.item",
+          "ourStrategy.title",
+          "ourStrategy.steps.title",
+          "ourStrategy.steps.strategy_step_list.item",
+          "ourStrategy.steps.strategy_step_image",
+          "aboutUs.title",
+          "aboutUs.description",
+          "aboutUs.aboutList.item",
+          "howItWorks.title",
+          "howItWorks.working_steps.name",
+          "howItWorks.working_steps.description",
+          "howItWorks.working_steps.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::home-page.home-page",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "hero.title",
+          "hero.subtitle",
+          "ourSolutions.title",
+          "ourSolutions.description",
+          "ourSolutions.personalAgency.item",
+          "ourStrategy.title",
+          "ourStrategy.steps.title",
+          "ourStrategy.steps.strategy_step_list.item",
+          "ourStrategy.steps.strategy_step_image",
+          "aboutUs.title",
+          "aboutUs.description",
+          "aboutUs.aboutList.item",
+          "howItWorks.title",
+          "howItWorks.working_steps.name",
+          "howItWorks.working_steps.description",
+          "howItWorks.working_steps.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "hero.title",
+          "hero.subtitle",
+          "ourSolutions.title",
+          "ourSolutions.description",
+          "ourSolutions.personalAgency.item",
+          "ourStrategy.title",
+          "ourStrategy.steps.title",
+          "ourStrategy.steps.strategy_step_list.item",
+          "ourStrategy.steps.strategy_step_image",
+          "aboutUs.title",
+          "aboutUs.description",
+          "aboutUs.aboutList.item",
+          "howItWorks.title",
+          "howItWorks.working_steps.name",
+          "howItWorks.working_steps.description",
+          "howItWorks.working_steps.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::pricing.pricing",
+      "properties": {
+        "fields": [
+          "pricing.title",
+          "pricing.plans.monthly_price",
+          "pricing.plans.yearly_price",
+          "pricing.plans.plan_name",
+          "pricing.plans.plan_features.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::pricing.pricing",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::pricing.pricing",
+      "properties": {
+        "fields": [
+          "pricing.title",
+          "pricing.plans.monthly_price",
+          "pricing.plans.yearly_price",
+          "pricing.plans.plan_name",
+          "pricing.plans.plan_features.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::pricing.pricing",
+      "properties": {
+        "fields": [
+          "pricing.title",
+          "pricing.plans.monthly_price",
+          "pricing.plans.yearly_price",
+          "pricing.plans.plan_name",
+          "pricing.plans.plan_features.item"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "Services.name",
+          "Services.description",
+          "Services.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::service.service",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "Services.name",
+          "Services.description",
+          "Services.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::service.service",
+      "properties": {
+        "fields": [
+          "Services.name",
+          "Services.description",
+          "Services.hoverDescription"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::social-media-link.social-media-link",
+      "properties": {
+        "fields": [
+          "socialMediaLinks.name",
+          "socialMediaLinks.link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::social-media-link.social-media-link",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::social-media-link.social-media-link",
+      "properties": {
+        "fields": [
+          "socialMediaLinks.name",
+          "socialMediaLinks.link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::social-media-link.social-media-link",
+      "properties": {
+        "fields": [
+          "socialMediaLinks.name",
+          "socialMediaLinks.link"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::testimonial.testimonial",
+      "properties": {
+        "fields": [
+          "testimonial.title",
+          "testimonial.description",
+          "testimonial.testimonialListing.name",
+          "testimonial.testimonialListing.review",
+          "testimonial.testimonialListing.designation",
+          "testimonial.testimonialListing.company_name",
+          "testimonial.testimonialListing.rating"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::testimonial.testimonial",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::testimonial.testimonial",
+      "properties": {
+        "fields": [
+          "testimonial.title",
+          "testimonial.description",
+          "testimonial.testimonialListing.name",
+          "testimonial.testimonialListing.review",
+          "testimonial.testimonialListing.designation",
+          "testimonial.testimonialListing.company_name",
+          "testimonial.testimonialListing.rating"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::testimonial.testimonial",
+      "properties": {
+        "fields": [
+          "testimonial.title",
+          "testimonial.description",
+          "testimonial.testimonialListing.name",
+          "testimonial.testimonialListing.review",
+          "testimonial.testimonialListing.designation",
+          "testimonial.testimonialListing.company_name",
+          "testimonial.testimonialListing.rating"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    }
+  ]
+}
