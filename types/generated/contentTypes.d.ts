@@ -784,6 +784,38 @@ export interface ApiComplianceRegulationComplianceRegulation
   };
 }
 
+export interface ApiConfigurationConfiguration extends Schema.SingleType {
+  collectionName: 'configurations';
+  info: {
+    singularName: 'configuration';
+    pluralName: 'configurations';
+    displayName: 'configuration';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    popup: Attribute.Boolean & Attribute.DefaultTo<false>;
+    enrolledstudents: Attribute.Boolean & Attribute.DefaultTo<false>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::configuration.configuration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::configuration.configuration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactContact extends Schema.CollectionType {
   collectionName: 'contacts';
   info: {
@@ -1016,6 +1048,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     singularName: 'order';
     pluralName: 'orders';
     displayName: 'Order';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1024,6 +1057,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     username: Attribute.String;
     products: Attribute.JSON;
     stripeSessionToken: Attribute.String;
+    expired: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1244,6 +1278,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::claims-and-billing.claims-and-billing': ApiClaimsAndBillingClaimsAndBilling;
       'api::compliance-regulation.compliance-regulation': ApiComplianceRegulationComplianceRegulation;
+      'api::configuration.configuration': ApiConfigurationConfiguration;
       'api::contact.contact': ApiContactContact;
       'api::course.course': ApiCourseCourse;
       'api::document-management.document-management': ApiDocumentManagementDocumentManagement;
