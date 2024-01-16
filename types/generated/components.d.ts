@@ -104,6 +104,18 @@ export interface HeroTitleSubtitle extends Schema.Component {
   };
 }
 
+export interface HeroTrainingAbout extends Schema.Component {
+  collectionName: 'components_hero_training_abouts';
+  info: {
+    displayName: 'training-about';
+  };
+  attributes: {
+    title: Attribute.String;
+    description_one: Attribute.Text;
+    description_two: Attribute.Text;
+  };
+}
+
 export interface HowItWorksHowItWorks extends Schema.Component {
   collectionName: 'components_how_it_works_how_it_works';
   info: {
@@ -296,6 +308,7 @@ declare module '@strapi/types' {
       'course.skills-you-gain': CourseSkillsYouGain;
       'course.what-you-will-learn': CourseWhatYouWillLearn;
       'hero.title-subtitle': HeroTitleSubtitle;
+      'hero.training-about': HeroTrainingAbout;
       'how-it-works.how-it-works': HowItWorksHowItWorks;
       'learn-more.learn-more': LearnMoreLearnMore;
       'lessons.lessonsdescription': LessonsLessonsdescription;
