@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "training_about_uses",
+  "info": {
+    "singularName": "training-about-us",
+    "pluralName": "training-about-uses",
+    "displayName": "Training About Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.training-about"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.title-subtitle"
+    },
+    "privacy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.training-about"
+    },
+    "security": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.title-subtitle"
+    }
+  }
+}

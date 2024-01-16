@@ -1234,6 +1234,39 @@ export interface ApiTestimonialTestimonial extends Schema.SingleType {
   };
 }
 
+export interface ApiTrainingAboutUsTrainingAboutUs extends Schema.SingleType {
+  collectionName: 'training_about_uses';
+  info: {
+    singularName: 'training-about-us';
+    pluralName: 'training-about-uses';
+    displayName: 'Training About Us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Attribute.Component<'hero.training-about'>;
+    about: Attribute.Component<'hero.title-subtitle'>;
+    privacy: Attribute.Component<'hero.training-about'>;
+    security: Attribute.Component<'hero.title-subtitle'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::training-about-us.training-about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::training-about-us.training-about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiUnitUnit extends Schema.CollectionType {
   collectionName: 'units';
   info: {
@@ -1291,6 +1324,7 @@ declare module '@strapi/types' {
       'api::service.service': ApiServiceService;
       'api::social-media-link.social-media-link': ApiSocialMediaLinkSocialMediaLink;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::training-about-us.training-about-us': ApiTrainingAboutUsTrainingAboutUs;
       'api::unit.unit': ApiUnitUnit;
     }
   }

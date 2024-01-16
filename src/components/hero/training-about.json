@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_hero_training_abouts",
+  "info": {
+    "displayName": "training-about"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description_one": {
+      "type": "text"
+    },
+    "description_two": {
+      "type": "text"
+    }
+  }
+}
