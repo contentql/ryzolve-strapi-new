@@ -938,6 +938,28 @@ export interface ApiDocumentManagementDocumentManagement
   };
 }
 
+export interface ApiFaqFaq extends Schema.CollectionType {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    faq: Attribute.Component<'faqs.faqs', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1315,6 +1337,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::course.course': ApiCourseCourse;
       'api::document-management.document-management': ApiDocumentManagementDocumentManagement;
+      'api::faq.faq': ApiFaqFaq;
       'api::footer.footer': ApiFooterFooter;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::metadata.metadata': ApiMetadataMetadata;

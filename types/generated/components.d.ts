@@ -93,6 +93,17 @@ export interface CourseWhatYouWillLearn extends Schema.Component {
   };
 }
 
+export interface FaqsFaqs extends Schema.Component {
+  collectionName: 'components_faqs_faqs';
+  info: {
+    displayName: 'faqs';
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.String;
+  };
+}
+
 export interface HeroTitleSubtitle extends Schema.Component {
   collectionName: 'components_hero_title_subtitles';
   info: {
@@ -307,6 +318,7 @@ declare module '@strapi/types' {
       'contact-us.contact-us': ContactUsContactUs;
       'course.skills-you-gain': CourseSkillsYouGain;
       'course.what-you-will-learn': CourseWhatYouWillLearn;
+      'faqs.faqs': FaqsFaqs;
       'hero.title-subtitle': HeroTitleSubtitle;
       'hero.training-about': HeroTrainingAbout;
       'how-it-works.how-it-works': HowItWorksHowItWorks;
