@@ -1162,6 +1162,42 @@ export interface ApiQuizScoreQuizScore extends Schema.CollectionType {
   };
 }
 
+export interface ApiReviewReview extends Schema.CollectionType {
+  collectionName: 'reviews';
+  info: {
+    singularName: 'review';
+    pluralName: 'reviews';
+    displayName: 'Review';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    review: Attribute.String;
+    designation: Attribute.String;
+    company: Attribute.String;
+    source: Attribute.Enumeration<['ryzolve', 'training']>;
+    video_url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -1344,6 +1380,7 @@ declare module '@strapi/types' {
       'api::order.order': ApiOrderOrder;
       'api::pricing.pricing': ApiPricingPricing;
       'api::quiz-score.quiz-score': ApiQuizScoreQuizScore;
+      'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
       'api::social-media-link.social-media-link': ApiSocialMediaLinkSocialMediaLink;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
