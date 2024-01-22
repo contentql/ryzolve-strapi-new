@@ -33,6 +33,10 @@
     },
     "video_url": {
       "type": "string"
+    },
+    "display": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -1180,6 +1180,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     company: Attribute.String;
     source: Attribute.Enumeration<['ryzolve', 'training']>;
     video_url: Attribute.String;
+    display: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
