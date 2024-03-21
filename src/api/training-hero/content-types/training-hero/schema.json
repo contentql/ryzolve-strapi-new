@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "training_heroes",
+  "info": {
+    "singularName": "training-hero",
+    "pluralName": "training-heroes",
+    "displayName": "Training Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "whyChooseOurExams": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.list-of-services",
+      "max": 4,
+      "min": 4
+    },
+    "whyTexasChooseUs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.services",
+      "max": 4,
+      "min": 4
+    }
+  }
+}

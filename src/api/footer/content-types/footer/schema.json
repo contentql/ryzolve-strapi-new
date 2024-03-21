@@ -26,6 +26,9 @@
       "type": "component",
       "repeatable": false,
       "component": "contact-us.contact-us"
+    },
+    "JoinTheCommunity": {
+      "type": "text"
     }
   }
 }

@@ -234,7 +234,7 @@ export interface ServicesListOfServices extends Schema.Component {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
-    hoverDescription: Attribute.String;
+    link: Attribute.String;
   };
 }
 
@@ -242,8 +242,11 @@ export interface ServicesServices extends Schema.Component {
   collectionName: 'components_services_services';
   info: {
     displayName: 'services';
+    description: '';
   };
-  attributes: {};
+  attributes: {
+    description: Attribute.Text;
+  };
 }
 
 export interface SocialMediaLinksSocialMediaLink extends Schema.Component {

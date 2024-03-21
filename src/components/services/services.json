@@ -1,8 +1,13 @@
 {
   "collectionName": "components_services_services",
   "info": {
-    "displayName": "services"
+    "displayName": "services",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
 }

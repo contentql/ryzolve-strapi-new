@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media-link",
     "pluralName": "social-media-links",
-    "displayName": "Social Media Link"
+    "displayName": "Social Media Link",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,9 @@
     "socialMediaLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "social-media-links.social-media-link"
+      "component": "social-media-links.social-media-link",
+      "max": 4,
+      "min": 4
     }
   }
 }

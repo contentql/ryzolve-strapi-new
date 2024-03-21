@@ -38,6 +38,13 @@
       "type": "component",
       "repeatable": false,
       "component": "how-it-works.how-it-works"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "services.list-of-services",
+      "max": 4,
+      "min": 4
     }
   }
 }

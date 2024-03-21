@@ -975,6 +975,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     NeedHelp: Attribute.Component<'learn-more.learn-more'>;
     LearnMore: Attribute.Component<'learn-more.learn-more'>;
     ContactUs: Attribute.Component<'contact-us.contact-us'>;
+    JoinTheCommunity: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1010,6 +1011,11 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     ourStrategy: Attribute.Component<'strategy.strategy'>;
     aboutUs: Attribute.Component<'about.about'>;
     howItWorks: Attribute.Component<'how-it-works.how-it-works'>;
+    services: Attribute.Component<'services.list-of-services', true> &
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1205,6 +1211,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'Service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1236,6 +1243,7 @@ export interface ApiSocialMediaLinkSocialMediaLink
     singularName: 'social-media-link';
     pluralName: 'social-media-links';
     displayName: 'Social Media Link';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1244,7 +1252,11 @@ export interface ApiSocialMediaLinkSocialMediaLink
     socialMediaLinks: Attribute.Component<
       'social-media-links.social-media-link',
       true
-    >;
+    > &
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1326,6 +1338,48 @@ export interface ApiTrainingAboutUsTrainingAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiTrainingHeroTrainingHero extends Schema.SingleType {
+  collectionName: 'training_heroes';
+  info: {
+    singularName: 'training-hero';
+    pluralName: 'training-heroes';
+    displayName: 'Training Home';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    whyChooseOurExams: Attribute.Component<'services.list-of-services', true> &
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
+    whyTexasChooseUs: Attribute.Component<'services.services', true> &
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::training-hero.training-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::training-hero.training-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiUnitUnit extends Schema.CollectionType {
   collectionName: 'units';
   info: {
@@ -1386,6 +1440,7 @@ declare module '@strapi/types' {
       'api::social-media-link.social-media-link': ApiSocialMediaLinkSocialMediaLink;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::training-about-us.training-about-us': ApiTrainingAboutUsTrainingAboutUs;
+      'api::training-hero.training-hero': ApiTrainingHeroTrainingHero;
       'api::unit.unit': ApiUnitUnit;
     }
   }
