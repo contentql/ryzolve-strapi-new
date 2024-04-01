@@ -1205,6 +1205,70 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiRyzolveAboutUsRyzolveAboutUs extends Schema.SingleType {
+  collectionName: 'ryzolve_about_uses';
+  info: {
+    singularName: 'ryzolve-about-us';
+    pluralName: 'ryzolve-about-uses';
+    displayName: 'RyzolveAboutUs';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    ourPhilosophy: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ryzolve-about-us.ryzolve-about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ryzolve-about-us.ryzolve-about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRyzolveContactRyzolveContact extends Schema.SingleType {
+  collectionName: 'ryzolve_contacts';
+  info: {
+    singularName: 'ryzolve-contact';
+    pluralName: 'ryzolve-contacts';
+    displayName: 'RyzolveContact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ryzolve-contact.ryzolve-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ryzolve-contact.ryzolve-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -1436,6 +1500,8 @@ declare module '@strapi/types' {
       'api::pricing.pricing': ApiPricingPricing;
       'api::quiz-score.quiz-score': ApiQuizScoreQuizScore;
       'api::review.review': ApiReviewReview;
+      'api::ryzolve-about-us.ryzolve-about-us': ApiRyzolveAboutUsRyzolveAboutUs;
+      'api::ryzolve-contact.ryzolve-contact': ApiRyzolveContactRyzolveContact;
       'api::service.service': ApiServiceService;
       'api::social-media-link.social-media-link': ApiSocialMediaLinkSocialMediaLink;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;

@@ -108,10 +108,12 @@ export interface HeroTitleSubtitle extends Schema.Component {
   collectionName: 'components_hero_title_subtitles';
   info: {
     displayName: 'title-subtitle';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.Text;
+    services: Attribute.Component<'services.services', true>;
   };
 }
 
