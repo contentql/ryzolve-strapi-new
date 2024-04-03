@@ -9,7 +9,7 @@ module.exports = {
         to: `${result.email}`,
         subject: "The Strapi Email plugin worked successfully",
         text: `Hello ${result.name}`, // Replace with a valid field ID
-        html: "Hello world!",
+        html: `${result.message}`,
       });
     } catch (err) {
       console.log(err);

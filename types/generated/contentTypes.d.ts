@@ -910,6 +910,7 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
     singularName: 'customer';
     pluralName: 'customers';
     displayName: 'Customer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -917,6 +918,8 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
   attributes: {
     email: Attribute.Email;
     name: Attribute.String;
+    message: Attribute.RichText &
+      Attribute.DefaultTo<'Please edit this message'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

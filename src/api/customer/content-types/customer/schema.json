@@ -4,7 +4,8 @@
   "info": {
     "singularName": "customer",
     "pluralName": "customers",
-    "displayName": "Customer"
+    "displayName": "Customer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,10 @@
     },
     "name": {
       "type": "string"
+    },
+    "message": {
+      "type": "richtext",
+      "default": "Please edit this message"
     }
   }
 }
