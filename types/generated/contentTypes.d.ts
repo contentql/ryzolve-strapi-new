@@ -904,6 +904,37 @@ export interface ApiCourseCourse extends Schema.CollectionType {
   };
 }
 
+export interface ApiCustomerCustomer extends Schema.CollectionType {
+  collectionName: 'customers';
+  info: {
+    singularName: 'customer';
+    pluralName: 'customers';
+    displayName: 'Customer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email;
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::customer.customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::customer.customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDocumentManagementDocumentManagement
   extends Schema.SingleType {
   collectionName: 'document_managements';
@@ -1491,6 +1522,7 @@ declare module '@strapi/types' {
       'api::configuration.configuration': ApiConfigurationConfiguration;
       'api::contact.contact': ApiContactContact;
       'api::course.course': ApiCourseCourse;
+      'api::customer.customer': ApiCustomerCustomer;
       'api::document-management.document-management': ApiDocumentManagementDocumentManagement;
       'api::faq.faq': ApiFaqFaq;
       'api::footer.footer': ApiFooterFooter;
