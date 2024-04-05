@@ -62,6 +62,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "WhatDoesThisCourseCover": {
+      "type": "component",
+      "repeatable": true,
+      "component": "course.what-you-will-learn"
     }
   }
 }
