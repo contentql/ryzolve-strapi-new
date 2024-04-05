@@ -886,6 +886,10 @@ export interface ApiCourseCourse extends Schema.CollectionType {
       'oneToOne',
       'api::category.category'
     >;
+    WhatDoesThisCourseCover: Attribute.Component<
+      'course.what-you-will-learn',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1493,6 +1497,7 @@ export interface ApiUnitUnit extends Schema.CollectionType {
     title: Attribute.String;
     lesson: Attribute.Component<'lessons.lessonsdescription', true>;
     quiz: Attribute.Component<'quiz.quiz', true>;
+    time: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
