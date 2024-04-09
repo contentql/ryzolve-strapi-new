@@ -17,10 +17,6 @@
     },
     "name": {
       "type": "string"
-    },
-    "message": {
-      "type": "richtext",
-      "default": "Please edit this message"
     }
   }
 }

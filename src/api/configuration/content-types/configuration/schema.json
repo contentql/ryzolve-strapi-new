@@ -19,6 +19,20 @@
     "enrolledstudents": {
       "type": "boolean",
       "default": false
+    },
+    "emailDocument": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "emailMessage": {
+      "type": "richtext"
     }
   }
 }

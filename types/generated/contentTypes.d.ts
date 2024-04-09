@@ -798,6 +798,8 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
   attributes: {
     popup: Attribute.Boolean & Attribute.DefaultTo<false>;
     enrolledstudents: Attribute.Boolean & Attribute.DefaultTo<false>;
+    emailDocument: Attribute.Media;
+    emailMessage: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -922,8 +924,6 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
   attributes: {
     email: Attribute.Email;
     name: Attribute.String;
-    message: Attribute.RichText &
-      Attribute.DefaultTo<'Please edit this message'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
