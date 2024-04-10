@@ -29,9 +29,9 @@ module.exports = {
 
       await strapi.plugins["email"].services.email.send({
         to: `${result.email}`,
-        subject: "The Strapi Email plugin worked successfully",
-        text: `Hello ${result.name}`, // Replace with a valid field ID
-        html: `${message}`,
+        subject: `${result.emailSubject}`,
+        // text: `Hello ${result.name}`, // Replace with a valid field ID
+        html: `Hi ${result.name}\n ${message}`,
         attachments: [
           {
             filename: "Ryzolve",

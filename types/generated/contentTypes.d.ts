@@ -800,6 +800,7 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     enrolledstudents: Attribute.Boolean & Attribute.DefaultTo<false>;
     emailDocument: Attribute.Media;
     emailMessage: Attribute.RichText;
+    emailSubject: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

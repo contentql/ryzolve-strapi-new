@@ -33,6 +33,9 @@
     },
     "emailMessage": {
       "type": "richtext"
+    },
+    "emailSubject": {
+      "type": "string"
     }
   }
 }

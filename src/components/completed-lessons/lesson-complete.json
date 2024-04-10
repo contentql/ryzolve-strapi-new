@@ -12,6 +12,9 @@
     },
     "course_id": {
       "type": "string"
+    },
+    "unitId": {
+      "type": "string"
     }
   }
 }

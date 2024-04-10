@@ -45,6 +45,7 @@ export interface CompletedLessonsLessonComplete extends Schema.Component {
   attributes: {
     LessonTitle: Attribute.String;
     course_id: Attribute.String;
+    unitId: Attribute.String;
   };
 }
 
