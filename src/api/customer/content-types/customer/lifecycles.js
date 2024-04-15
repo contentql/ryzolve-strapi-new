@@ -29,7 +29,7 @@ module.exports = {
 
       await strapi.plugins["email"].services.email.send({
         to: `${result.email}`,
-        subject: `${result.emailSubject}`,
+        subject: `${pdf.emailSubject}`,
         // text: `Hello ${result.name}`, // Replace with a valid field ID
         html: `Hi ${result.name}\n ${message}`,
         attachments: [

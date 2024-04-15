@@ -25,16 +25,16 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
             .findOne(product.id);
 
           return {
-            // price_data: {
-            //   currency: "inr",
-            //   product_data: {
-            //     name: item.title,
-            //   },
-            //   unit_amount: Math.round(item.price * 100),
-            // },
-            // quantity: 1,
-            price: item.priceId,
+            price_data: {
+              currency: "inr",
+              product_data: {
+                name: item.title,
+              },
+              unit_amount: Math.round(item.price * 100),
+            },
             quantity: 1,
+            // price: item.priceId,
+            // quantity: 1,
           };
         })
       );
