@@ -41,7 +41,6 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
       // create a stripe session
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
         customer_email: email,
         mode: "payment",
         success_url:
@@ -53,29 +52,12 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
       console.log({ session });
 
-      //create a stripe payment link
-      const paymentLink = await stripe.paymentLinks.create({
-        line_items: lineItems,
-        after_completion: {
-          type: "redirect",
-          redirect: {
-            url: process.env.CLIENT_URL + "/purchase-completed",
-          },
-        },
-      });
-
-      // const intent = await stripe.paymentIntents.retrieve(
-      //   "{{PAYMENT_INTENT_ID}}"
-      // );
-      // const charges = intent.charges.data;
-      // console.log({ charges });
-
       // create the item
       await strapi.service("api::order.order").create({
         data: { username, products, stripeSessionToken: session.id },
       });
 
-      return { url: paymentLink.url, id: session.id };
+      return { id: session.id };
     } catch (error) {
       ctx.response.status = 500;
       return { error };
