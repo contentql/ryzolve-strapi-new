@@ -16,7 +16,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     // @ts-ignore
 
     // retrieve item information
-    const { products, username, email } = ctx.request.body;
+    const { products, username, email, discount } = ctx.request.body;
     try {
       const lineItems = await Promise.all(
         products.map(async (product) => {
@@ -24,19 +24,16 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
             .service("api::course.course")
             .findOne(product.id);
 
+          const totalAmount = item.price - (discount / 100) * item.price;
+
           return {
             price_data: {
               currency: "inr",
               product_data: {
                 name: item.title,
               },
-              unit_amount: Math.round(item.price * 100),
+              unit_amount: Math.round(totalAmount * 100),
             },
-            discounts: [
-              {
-                amount_off: 5000, // Amount of discount in cents
-              },
-            ],
             quantity: 1,
             // price: item.priceId,
             // quantity: 1,
