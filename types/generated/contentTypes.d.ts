@@ -852,6 +852,36 @@ export interface ApiContactContact extends Schema.CollectionType {
   };
 }
 
+export interface ApiCouponCoupon extends Schema.SingleType {
+  collectionName: 'coupons';
+  info: {
+    singularName: 'coupon';
+    pluralName: 'coupons';
+    displayName: 'coupon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    coupons: Attribute.Component<'coupons.coupons', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::coupon.coupon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::coupon.coupon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCourseCourse extends Schema.CollectionType {
   collectionName: 'courses';
   info: {
@@ -1530,6 +1560,7 @@ declare module '@strapi/types' {
       'api::compliance-regulation.compliance-regulation': ApiComplianceRegulationComplianceRegulation;
       'api::configuration.configuration': ApiConfigurationConfiguration;
       'api::contact.contact': ApiContactContact;
+      'api::coupon.coupon': ApiCouponCoupon;
       'api::course.course': ApiCourseCourse;
       'api::customer.customer': ApiCustomerCustomer;
       'api::document-management.document-management': ApiDocumentManagementDocumentManagement;

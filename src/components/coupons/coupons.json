@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_coupons_coupons",
+  "info": {
+    "displayName": "coupons"
+  },
+  "options": {},
+  "attributes": {
+    "coupon": {
+      "type": "string"
+    },
+    "percentage": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

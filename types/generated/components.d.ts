@@ -74,6 +74,18 @@ export interface ContactUsContactUs extends Schema.Component {
   };
 }
 
+export interface CouponsCoupons extends Schema.Component {
+  collectionName: 'components_coupons_coupons';
+  info: {
+    displayName: 'coupons';
+  };
+  attributes: {
+    coupon: Attribute.String;
+    percentage: Attribute.String;
+    active: Attribute.Boolean;
+  };
+}
+
 export interface CourseSkillsYouGain extends Schema.Component {
   collectionName: 'components_course_skills_you_gains';
   info: {
@@ -322,6 +334,7 @@ declare module '@strapi/types' {
       'completed-lessons.lesson-complete': CompletedLessonsLessonComplete;
       'completed-lessons.user': CompletedLessonsUser;
       'contact-us.contact-us': ContactUsContactUs;
+      'coupons.coupons': CouponsCoupons;
       'course.skills-you-gain': CourseSkillsYouGain;
       'course.what-you-will-learn': CourseWhatYouWillLearn;
       'faqs.faqs': FaqsFaqs;

@@ -32,6 +32,11 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
               },
               unit_amount: Math.round(item.price * 100),
             },
+            discounts: [
+              {
+                amount_off: 5000, // Amount of discount in cents
+              },
+            ],
             quantity: 1,
             // price: item.priceId,
             // quantity: 1,
