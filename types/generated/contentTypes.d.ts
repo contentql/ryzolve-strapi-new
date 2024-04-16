@@ -959,6 +959,7 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
   attributes: {
     email: Attribute.Email;
     name: Attribute.String;
+    source: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
