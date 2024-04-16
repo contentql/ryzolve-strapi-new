@@ -24,9 +24,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
             .service("api::course.course")
             .findOne(product.id);
 
-          const totalAmount = Math.round(
-            item.price - (discount / 100) * item.price
-          );
+          const totalAmount = item.price - (discount / 100) * item.price;
 
           return {
             price_data: {

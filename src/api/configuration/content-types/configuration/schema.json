@@ -36,6 +36,20 @@
     },
     "emailSubject": {
       "type": "string"
+    },
+    "trainingEmailMessage": {
+      "type": "richtext"
+    },
+    "trainingEmailSubject": {
+      "type": "string"
+    },
+    "coupons": {
+      "type": "component",
+      "repeatable": false,
+      "component": "coupons.coupons"
+    },
+    "tax": {
+      "type": "integer"
     }
   }
 }

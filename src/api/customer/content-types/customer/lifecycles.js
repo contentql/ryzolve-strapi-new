@@ -1,6 +1,5 @@
 module.exports = {
   async afterCreate(event) {
-    // Connected to "Save" button in admin panel
     const { result } = event;
 
     async function downloadPDF(pdfURL) {
@@ -25,7 +24,6 @@ module.exports = {
       const message = pdf.emailMessage;
 
       const pdfBuffer = await downloadPDF(pdf.emailDocument.url);
-      // console.log("pdfBuffer", Buffer.from(pdfBuffer).toString());
 
       await strapi.plugins["email"].services.email.send({
         to: `${result.email}`,
