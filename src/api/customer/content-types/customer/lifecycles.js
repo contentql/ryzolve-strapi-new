@@ -59,7 +59,7 @@ module.exports = {
       try {
         const pdf = await strapi.db
           .query("api::configuration.configuration")
-          .findOne({ populate: { emailDocument: true } });
+          .findOne({ populate: { emailDocument: true, coupons: true } });
 
         console.log("pdf", pdf);
 
@@ -69,7 +69,7 @@ module.exports = {
           to: `${result.email}`,
           subject: `${pdf.trainingEmailSubject}`,
           // text: `Hello ${result.name}`, // Replace with a valid field ID
-          html: `Hi ${result.name}\n Use this  ${message}`,
+          html: `Hi ${result.name}\n Use this coupon code : ${pdf.coupons.coupon}\n ${message}`,
         });
       } catch (err) {
         console.log(err);
