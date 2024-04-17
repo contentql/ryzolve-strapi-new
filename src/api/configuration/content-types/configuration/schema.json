@@ -4,7 +4,7 @@
   "info": {
     "singularName": "configuration",
     "pluralName": "configurations",
-    "displayName": "configuration",
+    "displayName": "Configuration",
     "description": ""
   },
   "options": {
@@ -31,18 +31,6 @@
         "audios"
       ]
     },
-    "emailMessage": {
-      "type": "richtext"
-    },
-    "emailSubject": {
-      "type": "string"
-    },
-    "trainingEmailMessage": {
-      "type": "richtext"
-    },
-    "trainingEmailSubject": {
-      "type": "string"
-    },
     "coupons": {
       "type": "component",
       "repeatable": false,
@@ -50,6 +38,18 @@
     },
     "tax": {
       "type": "integer"
+    },
+    "documentEmailSubject": {
+      "type": "string"
+    },
+    "documentEmailMessage": {
+      "type": "richtext"
+    },
+    "offerEmailSubject": {
+      "type": "string"
+    },
+    "offerEmailMessage": {
+      "type": "richtext"
     }
   }
 }

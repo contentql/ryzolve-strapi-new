@@ -22,13 +22,13 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.emailMessage;
+        const message = pdf.documentEmailMessage;
 
         const pdfBuffer = await downloadPDF(pdf.emailDocument.url);
 
         await strapi.plugins["email"].services.email.send({
           to: `${result.email}`,
-          subject: `${pdf.emailSubject}`,
+          subject: `${pdf.documentEmailSubject}`,
           // text: `Hello ${result.name}`, // Replace with a valid field ID
           html: `Hi ${result.name}\n ${message}`,
           attachments: [
@@ -63,11 +63,11 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.trainingEmailMessage;
+        const message = pdf.offerEmailMessage;
 
         await strapi.plugins["email"].services.email.send({
           to: `${result.email}`,
-          subject: `${pdf.trainingEmailSubject}`,
+          subject: `${pdf.offerEmailSubject}`,
           // text: `Hello ${result.name}`, // Replace with a valid field ID
           html: `Hi ${result.name}\n Use this coupon code : ${pdf.coupons.coupon}\n ${message}`,
         });

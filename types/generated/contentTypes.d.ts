@@ -789,7 +789,7 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
   info: {
     singularName: 'configuration';
     pluralName: 'configurations';
-    displayName: 'configuration';
+    displayName: 'Configuration';
     description: '';
   };
   options: {
@@ -799,12 +799,12 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     popup: Attribute.Boolean & Attribute.DefaultTo<false>;
     enrolledstudents: Attribute.Boolean & Attribute.DefaultTo<false>;
     emailDocument: Attribute.Media;
-    emailMessage: Attribute.RichText;
-    emailSubject: Attribute.String;
-    trainingEmailMessage: Attribute.RichText;
-    trainingEmailSubject: Attribute.String;
     coupons: Attribute.Component<'coupons.coupons'>;
     tax: Attribute.Integer;
+    documentEmailSubject: Attribute.String;
+    documentEmailMessage: Attribute.RichText;
+    offerEmailSubject: Attribute.String;
+    offerEmailMessage: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -828,7 +828,8 @@ export interface ApiContactContact extends Schema.CollectionType {
   info: {
     singularName: 'contact';
     pluralName: 'contacts';
-    displayName: 'contact';
+    displayName: 'Contact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -849,36 +850,6 @@ export interface ApiContactContact extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::contact.contact',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCouponCoupon extends Schema.SingleType {
-  collectionName: 'coupons';
-  info: {
-    singularName: 'coupon';
-    pluralName: 'coupons';
-    displayName: 'coupon';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    coupons: Attribute.Component<'coupons.coupons', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coupon.coupon',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coupon.coupon',
       'oneToOne',
       'admin::user'
     > &
@@ -1017,7 +988,8 @@ export interface ApiFaqFaq extends Schema.CollectionType {
   info: {
     singularName: 'faq';
     pluralName: 'faqs';
-    displayName: 'faq';
+    displayName: 'Faq';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1113,7 +1085,7 @@ export interface ApiMetadataMetadata extends Schema.CollectionType {
   info: {
     singularName: 'metadata';
     pluralName: 'metadatas';
-    displayName: 'metadata';
+    displayName: 'Metadata';
     description: '';
   };
   options: {
@@ -1565,7 +1537,6 @@ declare module '@strapi/types' {
       'api::compliance-regulation.compliance-regulation': ApiComplianceRegulationComplianceRegulation;
       'api::configuration.configuration': ApiConfigurationConfiguration;
       'api::contact.contact': ApiContactContact;
-      'api::coupon.coupon': ApiCouponCoupon;
       'api::course.course': ApiCourseCourse;
       'api::customer.customer': ApiCustomerCustomer;
       'api::document-management.document-management': ApiDocumentManagementDocumentManagement;
