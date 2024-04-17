@@ -805,6 +805,7 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     documentEmailMessage: Attribute.RichText;
     offerEmailSubject: Attribute.String;
     offerEmailMessage: Attribute.RichText;
+    testEmail: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -22,7 +22,7 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.documentEmailMessage;
+        const message = pdf.testEmail;
 
         const pdfBuffer = await downloadPDF(pdf.emailDocument.url);
 

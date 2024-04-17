@@ -50,6 +50,9 @@
     },
     "offerEmailMessage": {
       "type": "richtext"
+    },
+    "testEmail": {
+      "type": "text"
     }
   }
 }
