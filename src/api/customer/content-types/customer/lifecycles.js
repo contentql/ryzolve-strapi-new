@@ -22,7 +22,7 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.testEmail;
+        const message = pdf.documentEmailMessage;
 
         const pdfBuffer = await downloadPDF(pdf.emailDocument.url);
 
@@ -63,7 +63,7 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.offerEmailMessage;
+        const message = pdf.testEmail;
 
         await strapi.plugins["email"].services.email.send({
           to: `${result.email}`,
