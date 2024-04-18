@@ -42,16 +42,16 @@
     "documentEmailSubject": {
       "type": "string"
     },
-    "documentEmailMessage": {
-      "type": "richtext"
-    },
     "offerEmailSubject": {
       "type": "string"
     },
-    "offerEmailMessage": {
-      "type": "richtext"
-    },
     "testEmail": {
+      "type": "text"
+    },
+    "documentEmailMessage": {
+      "type": "text"
+    },
+    "offerEmailMessage": {
       "type": "text"
     }
   }

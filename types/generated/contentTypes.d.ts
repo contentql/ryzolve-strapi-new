@@ -802,10 +802,10 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     coupons: Attribute.Component<'coupons.coupons'>;
     tax: Attribute.Integer;
     documentEmailSubject: Attribute.String;
-    documentEmailMessage: Attribute.RichText;
     offerEmailSubject: Attribute.String;
-    offerEmailMessage: Attribute.RichText;
     testEmail: Attribute.Text;
+    documentEmailMessage: Attribute.Text;
+    offerEmailMessage: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

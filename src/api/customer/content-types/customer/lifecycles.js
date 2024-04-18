@@ -24,13 +24,18 @@ module.exports = {
 
         const message = pdf.documentEmailMessage;
 
+        const updatedMessage = message.replace(
+          "https://s.ryzolve.com",
+          `${pdf.emailDocument.url}`
+        );
+
         const pdfBuffer = await downloadPDF(pdf.emailDocument.url);
 
         await strapi.plugins["email"].services.email.send({
           to: `${result.email}`,
           subject: `${pdf.documentEmailSubject}`,
           // text: `Hello ${result.name}`, // Replace with a valid field ID
-          html: `Hi ${result.name}\n ${message}`,
+          html: `Hi ${result.name}\n ${updatedMessage}`,
           attachments: [
             {
               filename: "Ryzolve",
@@ -63,7 +68,7 @@ module.exports = {
 
         console.log("pdf", pdf);
 
-        const message = pdf.testEmail;
+        const message = pdf.offerEmailMessage;
 
         const updatedMessage = message.replace(
           "20%OFF",
