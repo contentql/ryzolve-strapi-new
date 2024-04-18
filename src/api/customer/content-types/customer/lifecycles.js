@@ -65,11 +65,23 @@ module.exports = {
 
         const message = pdf.testEmail;
 
+        const updatedMessage = message.replace(
+          "20%OFF",
+          `${pdf.coupons.percentage}% OFF`
+        );
+
+        const couponUpdateMessage = updatedMessage.replace(
+          "RYZOLVE2024",
+          `${pdf.coupons.coupon}`
+        );
+
+        console.log(updatedMessage);
+
         await strapi.plugins["email"].services.email.send({
           to: `${result.email}`,
           subject: `${pdf.offerEmailSubject}`,
           // text: `Hello ${result.name}`, // Replace with a valid field ID
-          html: `Hi ${result.name}\n Use this coupon code : ${pdf.coupons.coupon}\n ${message}`,
+          html: `Hi ${result.name}\n Use this coupon code : ${pdf.coupons.coupon}\n ${couponUpdateMessage}`,
         });
       } catch (err) {
         console.log(err);
