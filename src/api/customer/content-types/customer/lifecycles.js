@@ -24,7 +24,7 @@ module.exports = {
 
         const message = pdf.documentEmailMessage;
 
-        const updatedMessage = message.replace(
+        const updatedMessage = message.replaceAll(
           "https://s.ryzolve.com",
           `${pdf.emailDocument.url}`
         );
