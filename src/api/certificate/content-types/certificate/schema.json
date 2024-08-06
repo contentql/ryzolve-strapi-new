@@ -15,7 +15,10 @@
     "certificate": {
       "type": "component",
       "repeatable": true,
-      "component": "certificate-names.certificate"
+      "component": "certificate-names.certificate",
+      "max": 1,
+      "min": 1,
+      "required": true
     }
   }
 }

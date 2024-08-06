@@ -729,7 +729,12 @@ export interface ApiCertificateCertificate extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    certificate: Attribute.Component<'certificate-names.certificate', true>;
+    certificate: Attribute.Component<'certificate-names.certificate', true> &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 1;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

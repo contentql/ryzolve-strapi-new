@@ -2,7 +2,7 @@
 // @ts-ignore
 //const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const stripe = require("stripe")(
-  "pk_test_51IZKCmJZWHNdQWQL806HG78F4q3O8XVKQ9AihMGzY2rLMjLU8S5ECBb4xxKjvaMbRH9CWtnC30pOdr4tW1UtHQFT00ReOvfbDA"
+  "pk_live_51IZKCmJZWHNdQWQL8OnhcYNkF2fmAxB3qzL4PmgxxvpJZWDEW6jFXHp8yCyv2QFOhBVQw0Xpjhql774TZde44qfm00JnGm23NB"
 );
 
 /**
