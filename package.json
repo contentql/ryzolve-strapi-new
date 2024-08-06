@@ -8,7 +8,6 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
-
   },
   "dependencies": {
     "@strapi/plugin-graphql": "4.14.4",
@@ -21,6 +20,7 @@
     "patch-package": "^8.0.0",
     "pg": "^8.11.3",
     "postinstall-postinstall": "^2.1.0",
+    "strapi-provider-email-mailjet": "^4.0.0",
     "strapi-tiptap-editor": "^0.9.12",
     "stripe": "^13.10.0"
   },

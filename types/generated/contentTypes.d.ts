@@ -723,6 +723,7 @@ export interface ApiCertificateCertificate extends Schema.CollectionType {
     singularName: 'certificate';
     pluralName: 'certificates';
     displayName: 'certificate';
+    description: '';
   };
   options: {
     draftAndPublish: true;

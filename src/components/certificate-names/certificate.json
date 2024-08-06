@@ -1,7 +1,8 @@
 {
   "collectionName": "components_certificate_names_certificates",
   "info": {
-    "displayName": "certificate"
+    "displayName": "certificate",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,14 +10,18 @@
       "type": "string"
     },
     "signature": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "designation": {
+      "type": "string"
     }
   }
 }

@@ -40,10 +40,12 @@ export interface CertificateNamesCertificate extends Schema.Component {
   collectionName: 'components_certificate_names_certificates';
   info: {
     displayName: 'certificate';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     signature: Attribute.Media;
+    designation: Attribute.String;
   };
 }
 

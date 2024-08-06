@@ -23,16 +23,30 @@ module.exports = ({ env }) => ({
     },
   },
   email: {
+    // config: {
+    //   provider: "sendgrid",
+    //   providerOptions: {
+    //     apiKey: env("SENDGRID_API_KEY"),
+    //   },
+    //   settings: {
+    //     defaultFrom: "akhil@contentql.io",
+    //     defaultReplyTo: "akhil@contentql.io",
+    //   },
+    // },
+
     config: {
-      provider: "sendgrid",
-      providerOptions: {
-        apiKey: env("SENDGRID_API_KEY"),
+      provider: "strapi-provider-email-mailjet",
+        providerOptions: {
+          publicApiKey: env("MAILJET_PUBLIC_KEY"),
+          secretApiKey: env("MAILJET_SECRET_KEY"),
+        },
+        settings: {
+          defaultFrom: "manojkarajada.mk@gmail.com",
+          defaultFromName: "Manoj",
+          defaultTo: "manojkarajada.mk@gmail.com",
+          defaultToName: "Manoj",
+        },
       },
-      settings: {
-        defaultFrom: "akhil@contentql.io",
-        defaultReplyTo: "akhil@contentql.io",
-      },
-    },
   },
 
   upload: {
