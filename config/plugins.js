@@ -36,17 +36,17 @@ module.exports = ({ env }) => ({
 
     config: {
       provider: "strapi-provider-email-mailjet",
-        providerOptions: {
-          publicApiKey: env("MAILJET_PUBLIC_KEY"),
-          secretApiKey: env("MAILJET_SECRET_KEY"),
-        },
-        settings: {
-          defaultFrom: "manojkarajada.mk@gmail.com",
-          defaultFromName: "Manoj",
-          defaultTo: "manojkarajada.mk@gmail.com",
-          defaultToName: "Manoj",
-        },
+      providerOptions: {
+        publicApiKey: env("MAILJET_PUBLIC_KEY"),
+        secretApiKey: env("MAILJET_SECRET_KEY"),
       },
+      settings: {
+        defaultFrom: "pas@ryzolve.com",
+        defaultFromName: "Ryzolve",
+        defaultTo: "pas@ryzolve.com",
+        defaultToName: "Ryzolve",
+      },
+    },
   },
 
   upload: {
