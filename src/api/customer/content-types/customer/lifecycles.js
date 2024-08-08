@@ -38,8 +38,9 @@ module.exports = {
           html: `Hi ${result.name}\n ${updatedMessage}`,
           attachments: [
             {
-              filename: "Ryzolve",
-              content: Buffer.from(pdfBuffer).toString("base64"),
+              ContentType: "application/pdf",
+              Filename: "Ryzolve.pdf",
+              Base64Content: Buffer.from(pdfBuffer).toString("base64"),
             },
           ],
         });
