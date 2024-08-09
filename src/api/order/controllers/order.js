@@ -1,9 +1,9 @@
 "use strict";
 // @ts-ignore
-//const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const stripe = require("stripe")(
-  "pk_live_51IZKCmJZWHNdQWQL8OnhcYNkF2fmAxB3qzL4PmgxxvpJZWDEW6jFXHp8yCyv2QFOhBVQw0Xpjhql774TZde44qfm00JnGm23NB"
-);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+// const stripe = require("stripe")(
+//   "pk_live_51IZKCmJZWHNdQWQL8OnhcYNkF2fmAxB3qzL4PmgxxvpJZWDEW6jFXHp8yCyv2QFOhBVQw0Xpjhql774TZde44qfm00JnGm23NB"
+// );
 
 /**
  * order controller
