@@ -626,6 +626,8 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToMany',
       'api::metadata.metadata'
     >;
+    firstname: Attribute.String;
+    lastname: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

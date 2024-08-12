@@ -88,6 +88,12 @@
       "relation": "manyToMany",
       "target": "api::metadata.metadata",
       "mappedBy": "users"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
     }
   }
 }
