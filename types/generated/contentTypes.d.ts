@@ -1231,6 +1231,7 @@ export interface ApiQuizScoreQuizScore extends Schema.CollectionType {
     singularName: 'quiz-score';
     pluralName: 'quiz-scores';
     displayName: 'QuizScore';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1240,6 +1241,8 @@ export interface ApiQuizScoreQuizScore extends Schema.CollectionType {
     courseTitle: Attribute.String;
     score: Attribute.String;
     email: Attribute.String;
+    firstname: Attribute.String;
+    lastname: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
