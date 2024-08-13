@@ -1194,11 +1194,11 @@ export interface ApiOrderOrder extends Schema.CollectionType {
   };
 }
 
-export interface ApiPricingPricing extends Schema.SingleType {
-  collectionName: 'pricings';
+export interface ApiPricing2Pricing2 extends Schema.SingleType {
+  collectionName: 'pricing2s';
   info: {
-    singularName: 'pricing';
-    pluralName: 'pricings';
+    singularName: 'pricing2';
+    pluralName: 'pricing2s';
     displayName: 'Pricing';
     description: '';
   };
@@ -1206,18 +1206,23 @@ export interface ApiPricingPricing extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    pricing: Attribute.Component<'pricing.pricing'>;
+    title: Attribute.String;
+    plans: Attribute.Component<'pricing-details.pricing-details', true> &
+      Attribute.SetMinMax<{
+        min: 3;
+        max: 3;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::pricing.pricing',
+      'api::pricing2.pricing2',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::pricing.pricing',
+      'api::pricing2.pricing2',
       'oneToOne',
       'admin::user'
     > &
@@ -1593,7 +1598,7 @@ declare module '@strapi/types' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::metadata.metadata': ApiMetadataMetadata;
       'api::order.order': ApiOrderOrder;
-      'api::pricing.pricing': ApiPricingPricing;
+      'api::pricing2.pricing2': ApiPricing2Pricing2;
       'api::quiz-score.quiz-score': ApiQuizScoreQuizScore;
       'api::review.review': ApiReviewReview;
       'api::ryzolve-about-us.ryzolve-about-us': ApiRyzolveAboutUsRyzolveAboutUs;

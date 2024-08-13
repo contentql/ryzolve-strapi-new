@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing2s",
+  "info": {
+    "singularName": "pricing2",
+    "pluralName": "pricing2s",
+    "displayName": "Pricing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "plans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing-details.pricing-details",
+      "max": 3,
+      "min": 3
+    }
+  }
+}

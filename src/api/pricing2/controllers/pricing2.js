@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * pricing controller
+ * pricing2 controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::pricing.pricing');
+module.exports = createCoreController('api::pricing2.pricing2');
