@@ -846,7 +846,6 @@ export interface ApiConfigurationConfiguration extends Schema.SingleType {
     tax: Attribute.Integer;
     documentEmailSubject: Attribute.String;
     offerEmailSubject: Attribute.String;
-    testEmail: Attribute.Text;
     documentEmailMessage: Attribute.Text;
     offerEmailMessage: Attribute.Text;
     createdAt: Attribute.DateTime;

@@ -45,9 +45,6 @@
     "offerEmailSubject": {
       "type": "string"
     },
-    "testEmail": {
-      "type": "text"
-    },
     "documentEmailMessage": {
       "type": "text"
     },
