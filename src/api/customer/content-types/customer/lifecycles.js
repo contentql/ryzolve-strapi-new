@@ -39,7 +39,7 @@ module.exports = {
           attachments: [
             {
               ContentType: "application/pdf",
-              Filename: `${emailDocument.name}`,
+              Filename: `${pdf.emailDocument.name}`,
               Base64Content: Buffer.from(pdfBuffer).toString("base64"),
             },
           ],
