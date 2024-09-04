@@ -19,7 +19,7 @@
       "type": "component",
       "repeatable": true,
       "component": "pricing-details.pricing-details",
-      "max": 3,
+      "max": 6,
       "min": 3
     }
   }

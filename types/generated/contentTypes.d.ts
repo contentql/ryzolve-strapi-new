@@ -1209,7 +1209,7 @@ export interface ApiPricing2Pricing2 extends Schema.SingleType {
     plans: Attribute.Component<'pricing-details.pricing-details', true> &
       Attribute.SetMinMax<{
         min: 3;
-        max: 3;
+        max: 6;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
