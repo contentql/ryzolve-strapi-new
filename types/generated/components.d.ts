@@ -203,6 +203,19 @@ export interface ListGroupOfItems extends Schema.Component {
   };
 }
 
+export interface PlannedCustomersBusinessCustomers extends Schema.Component {
+  collectionName: 'components_planned_customers_business_customers';
+  info: {
+    displayName: 'Business Customers';
+  };
+  attributes: {
+    name: Attribute.String;
+    plan: Attribute.String;
+    email: Attribute.Email;
+    message: Attribute.RichText;
+  };
+}
+
 export interface PricingDetailsPricingDetails extends Schema.Component {
   collectionName: 'components_pricing_details_pricing_details';
   info: {
@@ -358,6 +371,7 @@ declare module '@strapi/types' {
       'learn-more.learn-more': LearnMoreLearnMore;
       'lessons.lessonsdescription': LessonsLessonsdescription;
       'list.group-of-items': ListGroupOfItems;
+      'planned-customers.business-customers': PlannedCustomersBusinessCustomers;
       'pricing-details.pricing-details': PricingDetailsPricingDetails;
       'pricing.pricing': PricingPricing;
       'quiz.quiz-options': QuizQuizOptions;

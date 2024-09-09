@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_planned_customers_business_customers",
+  "info": {
+    "displayName": "Business Customers"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "message": {
+      "type": "richtext"
+    }
+  }
+}

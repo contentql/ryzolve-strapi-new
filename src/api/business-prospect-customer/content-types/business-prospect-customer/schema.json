@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_prospect_customers",
+  "info": {
+    "singularName": "business-prospect-customer",
+    "pluralName": "business-prospect-customers",
+    "displayName": "BusinessProspectCustomer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PricingRequestedCustomers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "planned-customers.business-customers"
+    }
+  }
+}

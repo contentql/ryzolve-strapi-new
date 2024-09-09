@@ -689,6 +689,40 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiBusinessProspectCustomerBusinessProspectCustomer
+  extends Schema.CollectionType {
+  collectionName: 'business_prospect_customers';
+  info: {
+    singularName: 'business-prospect-customer';
+    pluralName: 'business-prospect-customers';
+    displayName: 'BusinessProspectCustomer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    PricingRequestedCustomers: Attribute.Component<
+      'planned-customers.business-customers',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::business-prospect-customer.business-prospect-customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::business-prospect-customer.business-prospect-customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -1583,6 +1617,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::business-prospect-customer.business-prospect-customer': ApiBusinessProspectCustomerBusinessProspectCustomer;
       'api::category.category': ApiCategoryCategory;
       'api::certificate.certificate': ApiCertificateCertificate;
       'api::claims-and-billing.claims-and-billing': ApiClaimsAndBillingClaimsAndBilling;
