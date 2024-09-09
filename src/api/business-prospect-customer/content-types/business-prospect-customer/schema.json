@@ -4,17 +4,24 @@
   "info": {
     "singularName": "business-prospect-customer",
     "pluralName": "business-prospect-customers",
-    "displayName": "BusinessProspectCustomer"
+    "displayName": "BusinessProspectCustomers"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "PricingRequestedCustomers": {
-      "type": "component",
-      "repeatable": true,
-      "component": "planned-customers.business-customers"
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "plan": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
     }
   }
 }

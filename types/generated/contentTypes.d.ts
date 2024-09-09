@@ -695,16 +695,16 @@ export interface ApiBusinessProspectCustomerBusinessProspectCustomer
   info: {
     singularName: 'business-prospect-customer';
     pluralName: 'business-prospect-customers';
-    displayName: 'BusinessProspectCustomer';
+    displayName: 'BusinessProspectCustomers';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    PricingRequestedCustomers: Attribute.Component<
-      'planned-customers.business-customers',
-      true
-    >;
+    name: Attribute.String;
+    email: Attribute.Email;
+    plan: Attribute.String;
+    message: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
