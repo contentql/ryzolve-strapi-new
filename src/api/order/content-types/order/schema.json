@@ -24,6 +24,18 @@
     "expired": {
       "type": "boolean",
       "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "status": {
+      "type": "string"
+    },
+    "stripeRandomNumber": {
+      "type": "biginteger"
     }
   }
 }
