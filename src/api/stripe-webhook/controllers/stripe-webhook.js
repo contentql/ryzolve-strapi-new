@@ -139,7 +139,7 @@ async function sendEmail(to, subject, message, products, agency, city) {
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
         <div style="text-align: center; margin-bottom: 20px;">
-          <img src="https://your-logo-url.com/logo.png" alt="Ryzolve" style="max-width: 150px;" />
+          <img src="https://fhfqjcc.stripocdn.email/content/guids/CABINET_e4cafd70dfbf78cd99f9e36321d47993cd56fe9c5c3482d5a73b875e3956e04b/images/screenshot_20240417_at_164631removebgpreview.png" alt="Ryzolve" style="max-width: 150px;" />
         </div>
         <p style="font-size: 14px; color: #555;">${message}</p>
 
@@ -168,7 +168,7 @@ async function sendEmail(to, subject, message, products, agency, city) {
 
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
           <p style="font-size: 12px; color: #999;">© 2024 Ryzolve Inc. All rights reserved.</p>
-          <p style="font-size: 12px; color: #999;">1234 Your Street, City, Country</p>
+          <p style="font-size: 12px; color: #999;">9309 Highway 75 S Ste 102, New Waverly, TX 77358</p>
         </div>
       </div>
     `;
