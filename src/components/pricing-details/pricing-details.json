@@ -22,6 +22,12 @@
       "type": "component",
       "repeatable": true,
       "component": "list.group-of-items"
+    },
+    "suggested_for": {
+      "type": "string"
+    },
+    "support": {
+      "type": "string"
     }
   }
 }

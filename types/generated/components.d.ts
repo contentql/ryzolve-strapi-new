@@ -227,6 +227,8 @@ export interface PricingDetailsPricingDetails extends Schema.Component {
     yearly_price: Attribute.Float & Attribute.Required;
     plan_name: Attribute.String & Attribute.Required;
     plan_features: Attribute.Component<'list.group-of-items', true>;
+    suggested_for: Attribute.String;
+    support: Attribute.String;
   };
 }
 
