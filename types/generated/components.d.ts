@@ -223,12 +223,13 @@ export interface PricingDetailsPricingDetails extends Schema.Component {
     description: '';
   };
   attributes: {
-    monthly_price: Attribute.Float & Attribute.Required;
-    yearly_price: Attribute.Float & Attribute.Required;
+    monthly_price: Attribute.Float;
+    yearly_price: Attribute.Float;
     plan_name: Attribute.String & Attribute.Required;
     plan_features: Attribute.Component<'list.group-of-items', true>;
     suggested_for: Attribute.String;
     support: Attribute.String;
+    enable_pricing: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 

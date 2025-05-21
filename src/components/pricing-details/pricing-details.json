@@ -8,11 +8,11 @@
   "attributes": {
     "monthly_price": {
       "type": "float",
-      "required": true
+      "required": false
     },
     "yearly_price": {
       "type": "float",
-      "required": true
+      "required": false
     },
     "plan_name": {
       "type": "string",
@@ -28,6 +28,10 @@
     },
     "support": {
       "type": "string"
+    },
+    "enable_pricing": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
