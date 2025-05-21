@@ -230,6 +230,7 @@ export interface PricingDetailsPricingDetails extends Schema.Component {
     suggested_for: Attribute.String;
     support: Attribute.String;
     enable_pricing: Attribute.Boolean & Attribute.DefaultTo<false>;
+    custom_pricing: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
