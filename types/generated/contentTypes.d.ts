@@ -1257,6 +1257,9 @@ export interface ApiPricing2Pricing2 extends Schema.SingleType {
         min: 3;
         max: 6;
       }>;
+    enable_pricing: Attribute.Boolean & Attribute.DefaultTo<false>;
+    content: Attribute.RichText;
+    note: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

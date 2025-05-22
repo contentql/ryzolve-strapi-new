@@ -21,6 +21,16 @@
       "component": "pricing-details.pricing-details",
       "max": 6,
       "min": 3
+    },
+    "enable_pricing": {
+      "type": "boolean",
+      "default": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "note": {
+      "type": "richtext"
     }
   }
 }

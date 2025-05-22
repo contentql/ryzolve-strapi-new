@@ -29,10 +29,6 @@
     "support": {
       "type": "string"
     },
-    "enable_pricing": {
-      "type": "boolean",
-      "default": false
-    },
     "custom_pricing": {
       "type": "boolean",
       "default": false
